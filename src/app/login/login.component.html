@@ -1,0 +1,49 @@
+<body>
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-7"><br>
+            <!-- <img src="/assets/person-icon.jpg"  align-content="center"  style="height:15%;color: burlywood;"> -->
+        <h1 class="font-weight-bold">Login Form</h1>
+        <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)" >
+            <div class="form-group" class="form-row" [class.has-error]="!email.valid && email.touched">
+                <div class="col-lg-7">
+                    <label class="font-weight-bold" style="font-size: large;">EmailId</label>
+                    <span class="required-asterick">*</span>
+                    <input type="email" class="form-control" name="email" ngModel required #email="ngModel"
+                    placeholder="Enter EmailId" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"><br>
+                    <span class="help-block" *ngIf="email.errors?.required && email.touched">EmailId is required</span>
+                    <span class="help-block" *ngIf="email.errors?.pattern && email.touched">EmailId is invalid</span>
+
+                </div>
+            </div>
+            <br>
+            <div class="form-group" class="form-row">
+                <div class="col-lg-7">
+                    <label class="font-weight-bold" style="font-size: large;">Password</label>
+                    <span class="required-asterick">*</span>
+                    <input type="password" class="form-control" name="pass" ngModel required #pass="ngModel"
+                    placeholder="Enter password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                    maxlength="12">
+                    <span *ngIf="!pass.valid && pass.touched">Password is required</span>
+                    <div *ngIf="pass.errors?.pattern?.maxlength && pass.touched">Password should contain 1caps,1LowerCase,1Symbol
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-row">
+                <div class="col-lg-7">
+                    <button type="submit" class="btn btn-light btn-lg" [disabled]="!loginForm.valid">Login</button>
+                </div>
+            </div>
+            <a routerLink="forgotpass" >Forgot Password</a><br>
+            <a routerLink="/register" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Don't have account?Register Here</a><br>
+            
+        </form> 
+        </div>
+    </div>
+</div>
+</body>
+<!-- <p *ngIf="login?true:false">
+    <app-mobiles [username]="username" [email]="email"></app-mobiles>
+</p> -->
+<router-outlet></router-outlet>

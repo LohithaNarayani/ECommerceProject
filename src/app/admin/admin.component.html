@@ -1,0 +1,45 @@
+<body>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-lg-7"><br>
+                <!-- <img src="/assets/person-icon.jpg"  align-content="center"  style="height:15%;color: burlywood;"> -->
+            <h1 class="font-weight-bold">Admin Login Form</h1>
+            <form #adminForm="ngForm" (ngSubmit)="adminSubmit(adminForm)" >
+                <div class="form-group" class="form-row" [class.has-error]="!emailid.valid && emailid.touched">
+                    <div class="col-lg-7">
+                        <label class="font-weight-bold" style="font-size: large;">EmailId</label>
+                        <span class="required-asterick">*</span>
+                        <input type="email" class="form-control" name="emailid" ngModel required #emailid="ngModel"
+                        placeholder="Enter EmailId" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"><br>
+                        <span class="help-block" *ngIf="emailid.errors?.required && emailid.touched">EmailId is required</span>
+                        <span class="help-block" *ngIf="emailid.errors?.pattern && emailid.touched">EmailId is invalid</span>
+    
+                    </div>
+                </div>
+                <br>
+                <div class="form-group" class="form-row">
+                    <div class="col-lg-7">
+                        <label class="font-weight-bold" style="font-size: large;">Password</label>
+                        <span class="required-asterick">*</span>
+                        <input type="password" class="form-control" name="password" ngModel required #password="ngModel"
+                        placeholder="Enter password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
+                        maxlength="12">
+                        <span *ngIf="!password.valid && password.touched">Password is required</span>
+                        <div *ngIf="password.errors?.pattern?.maxlength && password.touched">Password should contain 1caps,1LowerCase,1Symbol
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="form-row">
+                    <div class="col-lg-7">
+                        <button type="submit" class="btn btn-light btn-lg" [disabled]="!adminForm.valid">Login</button>
+                    </div>
+                </div>
+                <a routerLink="forgotpass" >Forgot Password</a><br>  
+            </form> 
+            </div>
+        </div>
+    </div>
+    </body>
+    
+    

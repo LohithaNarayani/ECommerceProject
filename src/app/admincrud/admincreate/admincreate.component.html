@@ -1,0 +1,37 @@
+<div class="container-fluid" id="content">
+    <h1>Add Product Data</h1>
+    <br>
+    
+    <form #createForm="ngForm" (ngSubmit)="adminCreate(createForm)">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="id">ProductId</label>
+                <input type="text" class="form-control" name="id" placeholder="Enter ProductID" ngModel required
+                #id="ngModel">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="productname">Product Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter ProductName" ngModel required
+                #name="ngModel">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="specifications">Specifications</label>
+                <input type="text" class="form-control" name="specifications" placeholder="Enter specifications" ngModel required
+                #specifications="ngModel">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" name="price" placeholder="Enter price" ngModel required
+                #price="ngModel">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="image">Image</label>
+                <input type="file" (change)="onFileSelected($event)">
+                <button type="button" (click)="onUpload()">Upload</button>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Insert Product Data</button>
+        </div>
+    </form>
+    </div>
+    

@@ -1,0 +1,22 @@
+<nav class="navbar" style="justify-content: center;">
+    <input class="form-control" type="text" name="name" [(ngModel)]="mobname" (ngModelChange)="onSearch()"
+    placeholder="Enter mobile name to search" style="width: 50%;">
+</nav> 
+
+
+<div class="row"> 
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let mob of mobileList"> 
+        <mat-card>
+                <mat-card-title>Mobile Name: {{mob.mobname}}</mat-card-title>
+                <img class="card-img-top" mat-card-image src="{{mob.image}}" alt="{{mob.mobname}}">
+                <mat-card-subtitle>Mobile Specifications: {{mob.specifications}}</mat-card-subtitle>
+                <mat-card-content>Price: {{mob.price}}</mat-card-content>
+                <mat-card-content>Rating: {{mob.rating}} Stars</mat-card-content>
+                
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="addToCart(mob.mobname,mob.price)">Add To Cart</button>
+                    <button mat-raised-button color="accent" >Buy</button>
+                </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="row"> 
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let cart of cartItemList"> 
+        <mat-card>
+            <mat-card-title>Mobile Name: {{cart.mobname}} </mat-card-title>
+                <mat-card-title>Laptop Name: {{cart.lapname}} </mat-card-title>
+                <mat-card-title>SmartWatch Name: {{cart.watchname}} </mat-card-title>
+                <mat-card-content>Id: {{cart.id}}</mat-card-content>
+                <mat-card-content>AddToCart: {{cart.addtocart}} </mat-card-content>
+                <mat-card-content>Buy: {{cart.buy}} </mat-card-content> 
+                <!-- <mat-card-content>Price: {{cart.price}} </mat-card-content>  -->
+
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="removeCartData(cart.id)">Remove from Cart</button>
+                </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+
+
+

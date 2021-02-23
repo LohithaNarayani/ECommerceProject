@@ -1,0 +1,155 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Lohitha",
+      "email": "lohitha123@gmail.com",
+      "pass": "Lohitha@123"
+    },
+    {
+      "id": 2,
+      "username": "Vishnu",
+      "email": "vishnu.lohi@gmail.com",
+      "pass": "Vishnu*99"
+    },
+    {
+      "username": "Mukundh",
+      "email": "mukundh.arya@gmail.com",
+      "pass": "Mukundh@22",
+      "id": 4
+    },
+    {
+      "username": "Vijaya",
+      "email": "vijaya@gmail.com",
+      "pass": "Vijaya*99",
+      "id": 5
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "aname": "Monisha",
+      "emailid": "monisha.swarna@gmail.com",
+      "password": "Moni@1234"
+    },
+    {
+      "id": 2,
+      "aname": "Pavithra",
+      "emailid": "pavi.padma@gmail.com",
+      "password": "Padma@1234"
+    }
+  ],
+  "mobilesList": [
+    {
+      "id": 1,
+      "mobname": "OnePlus10Pro",
+      "specifications": "8gbRam,128gb",
+      "image": "assets/oneplus.jpg",
+      "price": "INR50000",
+      "rating": "4.5"
+    },
+    {
+      "id": 2,
+      "mobname": "RealMe8Pro",
+      "specifications": "6gbRam,64gb",
+      "image": "assets/realmemob.jpg",
+      "price": "INR30000",
+      "rating": "4.2"
+    },
+    {
+      "id": 3,
+      "mobname": "Vivo-V20",
+      "specifications": "8gbRam,128gb",
+      "image": "assets/vivo_v20.webp",
+      "price": "INR25000",
+      "rating": "4.0"
+    },
+    {
+      "id": 5,
+      "mobname": "Redmi11Pro",
+      "specifications": "8GBRAM,64GB",
+      "image": "assets/redmi11pro.png",
+      "price": "22000"
+    },
+    {
+      "id": 6
+    }
+  ],
+  "watchesList": [
+    {
+      "id": 1,
+      "watchname": "Amazefit-SmartWatch",
+      "features": "waterproof,Fitness tracking",
+      "image": "assets/amazefit-smatwatch-1.jpg",
+      "price": "INR3500",
+      "rating": "4.5"
+    },
+    {
+      "id": 2,
+      "watchname": "Amazfit-Xiaomi",
+      "features": "waterproof,Fitness tracking",
+      "image": "assets/amazfit-xiaomi.png",
+      "price": "INR2540",
+      "rating": "4.2"
+    },
+    {
+      "id": 3,
+      "watchname": "Fastract-reflex",
+      "features": "waterproof,Fitness tracking",
+      "image": "assets/fastrack-reflex.jpg",
+      "price": "INR2500",
+      "rating": "4.8"
+    }
+  ],
+  "laptopsList": [
+    {
+      "id": 1,
+      "lapname": "Dell Inspiron 5491",
+      "specifications": "8GBRAM,2TB-SSD,TouchScreen",
+      "image": "assets/dellpic.jpg",
+      "processor": "Intel Core i5",
+      "price": "INR70000",
+      "rating": "4.5"
+    },
+    {
+      "id": 2,
+      "lapname": "Lenovo IdeaPad 330",
+      "specifications": "8GBRAM,1TB-SSD",
+      "image": "assets/lenovo.jpg",
+      "processor": "Intel Core i5",
+      "price": "INR50000",
+      "rating": "4.2"
+    },
+    {
+      "id": 3,
+      "lapname": "Apple Mac Book Air",
+      "specifications": "8GBRAM,2TB-SSD,Waterproof",
+      "image": "assets/maclapbg.jpg",
+      "processor": "Intel Core i10",
+      "price": "INR150000",
+      "rating": "4.5"
+    }
+  ],
+  "cartitems": [
+    {
+      "lapname": "Apple Mac Book Air",
+      "addtocart": "yes",
+      "buy": "no",
+      "id": 2
+    },
+    {
+      "mobname": "OnePlus10Pro",
+      "price": "",
+      "addtocart": "yes",
+      "buy": "no",
+      "id": 4
+    },
+    {
+      "watchname": "Amazfit-Xiaomi",
+      "price": "INR2540",
+      "addtocart": "yes",
+      "buy": "no",
+      "id": 5
+    }
+  ]
+}
